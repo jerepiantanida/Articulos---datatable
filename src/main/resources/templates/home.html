@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Numero</th>
+				<th>Codigo_barra</th>
+				<th>Descripcion</th>
+				<th>Precio_Compra</th>
+                                <th>Precio_Venta</th>
+                                <th>Fecha_Vencimiento</th>
+                                <th>Proveedor</th>
+                                <th>Disponible</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="p : ${productos}">
+				<td th:text="${p.codigo_barra}"></td>
+				<td th:text="${p.descripcion}"></td>
+				<td th:text="${p.precio_compra}"></td>
+				<td th:text="${p.precio_venta}"></td>
+                                <td th:text="${p.fecha_vencimiento}"></td>
+                                <td th:text="${p.proveedor}"></td>
+                                <td th:text="${p.disponible}"></td>
+                                
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
